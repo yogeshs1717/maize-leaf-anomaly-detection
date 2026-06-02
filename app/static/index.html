@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maize Leaf Anomaly Detector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="badge">FastAPI Demo UI</div>
+        <h1>Maize Leaf Anomaly Detector</h1>
+        <p>
+          Upload a leaf image to get a Healthy / Diseased prediction with an
+          anomaly score.
+        </p>
+      </header>
+
+      <section class="panel">
+        <form id="predict-form" class="form">
+          <label class="file-card" for="image-input">
+            <input id="image-input" type="file" accept="image/*" />
+            <div class="file-copy">
+              <span class="file-title">Drop an image or click to browse</span>
+              <span class="file-sub">JPG, PNG, BMP, TIFF</span>
+            </div>
+          </label>
+          <div class="actions">
+            <button id="predict-btn" type="submit">Run Prediction</button>
+            <button id="clear-btn" type="button" class="ghost">Clear</button>
+          </div>
+        </form>
+
+        <div class="preview">
+          <div class="preview-card">
+            <img id="preview-img" alt="Preview" />
+            <div id="preview-empty" class="preview-empty">
+              No image selected
+            </div>
+          </div>
+          <div class="result-card">
+            <div class="result-title">Result</div>
+            <div id="result-status" class="result-status">Waiting</div>
+            <div id="result-meta" class="result-meta"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>API docs: </span>
+        <a href="/docs" target="_blank" rel="noreferrer">/docs</a>
+      </footer>
+    </main>
+
+    <script src="/static/config.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

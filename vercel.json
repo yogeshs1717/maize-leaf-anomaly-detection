@@ -1,0 +1,6 @@
+{
+  "public": "app/static",
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
